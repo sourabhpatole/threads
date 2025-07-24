@@ -8,6 +8,10 @@ import Error from "./pages/Error";
 import Register from "./pages/Register";
 import { Box } from "@mui/material";
 import ProtectedLayout from "./pages/protected/ProtectedLayout";
+import ProfileLayout from "./pages/protected/profile/ProfileLayout";
+import Threads from "./pages/protected/profile/Threads";
+import Replies from "./pages/protected/profile/Replies";
+import Repost from "./pages/protected/profile/Repost";
 const App = () => {
   return (
     <>
@@ -18,6 +22,11 @@ const App = () => {
               <Route exact path="" element={<Home />} />
               <Route exact path="post/:id" element={<h1>Single Post</h1>} />
               <Route exact path="search" element={<Search />} />
+              <Route exact path="profile" element={<ProfileLayout />}>
+                <Route exact path="threads/:id" element={<Threads />} />
+                <Route exact path="replies/:id" element={<Replies />} />
+                <Route exact path="reposts/:id" element={<Repost />} />
+              </Route>
             </Route>
           </Routes>
         </BrowserRouter>

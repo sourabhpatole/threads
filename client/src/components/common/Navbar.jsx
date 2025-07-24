@@ -27,7 +27,7 @@ const Navbar = () => {
       <Link to={""}>
         <CiHeart size={32} color="black" />
       </Link>
-      <Link>
+      <Link to={"/profile/threads/1"}>
         <RxAvatar size={32} color="black" />
       </Link>
     </Stack>
