@@ -1,44 +1,61 @@
-import { Avatar, Badge, Stack } from "@mui/material";
+import { Avatar, AvatarGroup, Badge, Stack, Stepper } from "@mui/material";
 import React from "react";
+import PostTwo from "./PostTwo";
 
 const PostOne = () => {
   return (
-    <div>
+    <Stack
+      flexDirection={"column"}
+      alignItems={"center"}
+      justifyContent={"space-between"}
+    >
+      <Badge
+        overlap="circular"
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        badgeContent={
+          <Avatar
+            alt="+"
+            src=""
+            sx={{
+              width: 20,
+              height: 20,
+              bgcolor: "green",
+              position: "relative",
+              right: 4,
+              bottom: 4,
+            }}
+          >
+            +
+          </Avatar>
+        }
+      >
+        <Avatar alt="so" src="" sx={{ width: 40, height: 40 }} />
+      </Badge>
       <Stack
         flexDirection={"column"}
         alignItems={"center"}
-        justifyContent={"space-between"}
+        gap={2}
+        height={"100%"}
       >
-        <Badge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          badgeContent={
-            <Avatar
-              alt="+"
-              src=""
-              sx={{
-                width: 20,
-                height: 20,
-                bgcolor: "green",
-                position: "relative",
-                right: 4,
-                bottom: 4,
-              }}
-            >
-              +
-            </Avatar>
-          }
+        <Stepper
+          orientation={"vertical"}
+          activeStep={0}
+          sx={{ border: "0.1rem solid gray", width: "0px", height: "100%" }}
+        ></Stepper>
+        <AvatarGroup
+          total={4}
+          sx={{
+            "& .MuiAvatar-root": {
+              width: 24,
+              height: 24,
+              fontSize: 12,
+            },
+          }}
         >
-          <Avatar alt="so" src="" sx={{ width: 40, height: 40 }} />
-        </Badge>
-        <Stack
-          flexDirection={"column"}
-          alignItems={"center"}
-          gap={2}
-          height={"100%"}
-        ></Stack>
+          <Avatar src="" alt="" />
+        </AvatarGroup>
       </Stack>
-    </div>
+    </Stack>
   );
 };
 

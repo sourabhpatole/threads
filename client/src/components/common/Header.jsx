@@ -24,7 +24,7 @@ const Header = () => {
         <Stack
           justifyContent={"center"}
           width={"550px"}
-          bgcolor={"aliceblue"}
+          bgcolor={"white"}
           zIndex={2}
           height={96}
         >

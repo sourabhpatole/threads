@@ -16,19 +16,19 @@ const Navbar = () => {
       alignItems={"center"}
     >
       <Link to={"/"}>
-        <GoHomeFill size={32} />
+        <GoHomeFill size={32} color="black" />
       </Link>
       <Link to={"/search"}>
-        <IoIosSearch size={32} />
+        <IoIosSearch size={32} color="black" />
       </Link>
       <Link to={"edit"}>
-        <TbEdit size={32} />
+        <TbEdit size={32} color="black" />
       </Link>
       <Link to={""}>
-        <CiHeart size={32} />
+        <CiHeart size={32} color="black" />
       </Link>
       <Link>
-        <RxAvatar size={32} />
+        <RxAvatar size={32} color="black" />
       </Link>
     </Stack>
   );
