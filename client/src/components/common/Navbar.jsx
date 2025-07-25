@@ -9,7 +9,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const _700 = useMediaQuery("(min-width:700px)");
+  const _300 = useMediaQuery("(min-width:300px)");
 
   return (
     <Stack
@@ -18,21 +18,25 @@ const Navbar = () => {
       justifyContent={"space-around"}
       alignItems={"center"}
     >
-      <BiLeftArrowAlt />
-      <Link to={"/"}>
-        <GoHomeFill size={32} color="black" />
+      <BiLeftArrowAlt
+        size={_300 ? 32 : 24}
+        className="image-icon"
+        color="black"
+      />
+      <Link to={"/"} className="link">
+        <GoHomeFill size={_300 ? 32 : 24} color="black" />
       </Link>
-      <Link to={"/search"}>
-        <IoIosSearch size={32} color="black" />
+      <Link to={"/search"} className="link">
+        <IoIosSearch size={_300 ? 32 : 24} color="black" />
       </Link>
-      <Link to={"edit"}>
-        <TbEdit size={32} color="black" />
+      <Link to={"edit"} className="link">
+        <TbEdit size={_300 ? 32 : 24} color="black" />
       </Link>
-      <Link to={""}>
-        <CiHeart size={32} color="black" />
+      <Link to={""} className="link">
+        <CiHeart size={_300 ? 32 : 24} color="black" />
       </Link>
-      <Link to={"/profile/threads/1"}>
-        <RxAvatar size={32} color="black" />
+      <Link to={"/profile/threads/1"} className="link">
+        <RxAvatar size={_300 ? 32 : 24} color="black" />
       </Link>
     </Stack>
   );
