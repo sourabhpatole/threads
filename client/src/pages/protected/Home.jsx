@@ -1,15 +1,21 @@
 import React from "react";
-import { Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import Input from "../../components/home/Input";
 import Post from "../../components/home/Post";
 const Home = () => {
   return (
-    <div>
+    <>
       <Input />
       <Stack flexDirection={"column"} gap={2} mb={10}>
         <Post />
       </Stack>
-    </div>
+      <Button
+        size="large"
+        sx={{ my: 5, p: 3, textDecoration: "underline", cursor: "pointer" }}
+      >
+        Load more
+      </Button>
+    </>
   );
 };
 
