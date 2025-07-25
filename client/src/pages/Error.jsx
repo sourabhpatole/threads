@@ -1,7 +1,9 @@
 import { Button, Stack, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Error = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Stack
@@ -17,20 +19,18 @@ const Error = () => {
         }}
       >
         <Stack
-          p={5}
+          p={2}
           border={"2px solid black"}
           marginLeft={"20px"}
           borderRadius={"10px"}
           flexDirection={"column"}
           alignItems={"center"}
           gap={2}
-          boxShadow={"7px 7px 7px white"}
         >
-          <Typography variant="h3">OOP's</Typography>
-          <Typography variant="h6">You are on Wrong Page!</Typography>
           <Button
             size="large"
-            sx={{ bgcolor: "blue", color: "white", borderRadius: "10px", p: 2 }}
+            sx={{ bgcolor: "blue", color: "white" }}
+            onClick={() => navigate(-1)}
           >
             Go Back
           </Button>
